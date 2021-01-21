@@ -1,0 +1,20 @@
+{
+  "name": "SearchByINN",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinamiryuk/SearchByINN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alinamiryuk/SearchByINN/issues"
+  },
+  "homepage": "https://github.com/alinamiryuk/SearchByINN#readme"
+}
