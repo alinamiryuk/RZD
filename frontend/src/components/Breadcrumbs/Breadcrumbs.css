@@ -1,0 +1,39 @@
+div.ui.grid.breadcrumbs {
+  margin: 1vh 0;
+  height: 3em;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.ui.grid.breadcrumbs > div.ui.top.attached.menu {
+  width: 20vw;
+  height: 5vh;
+  background-color: #f6f6f6;
+  border-color: #c3c3c3;
+  border-radius: 0.28571429rem;
+  align-items: center;
+}
+
+div.ui.grid.breadcrumbs
+  > div.ui.top.attached.menu
+  > div.ui.item.simple.dropdown {
+  margin: 0 0.4vw 0 0;
+  padding: 0;
+}
+
+
+
+div.ui.grid.breadcrumbs > div.ui.steps {
+  height: 3em;
+  width: 30vw;
+  margin: 0 1vw;
+}
+
+div.ui.grid.breadcrumbs > div.ui.steps > div.step::after {
+  width: 2em;
+  height: 2em;
+}
+
+.item:before {
+  display: none;
+}
