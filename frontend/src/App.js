@@ -5,11 +5,11 @@ import { PassangersData } from './components/PassangersData/PassangersData'
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Navbar />
       <Breadcrumbs />
       <PassangersData />
-    </>
+    </div>
   )
 }
 
