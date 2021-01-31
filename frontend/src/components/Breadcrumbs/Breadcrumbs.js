@@ -1,5 +1,5 @@
 import React from 'react'
 
 export const Breadcrumbs = () => {
-  return <>Breadcrumbs</>
+  return <div>Breadcrumbs</div>
 }

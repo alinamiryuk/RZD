@@ -4,9 +4,9 @@ import { PassangersForm } from './PassangersForm/PassangersForm'
 
 export const PassangersData = () => {
   return (
-    <>
+    <div>
       <PassangersForm />
       <OrderData />
-    </>
+    </div>
   )
 }

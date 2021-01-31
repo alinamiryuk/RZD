@@ -1,0 +1,29 @@
+div.ui.grid {
+  margin: 0;
+  height: 5vh;
+  justify-content: space-between;
+}
+div.ui.grid > div.ui.horizontal.list.middleWrapper > a {
+  color: #B7B7B7;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+div.ui.grid > div.ui.horizontal.list.rigntWrapper > a {
+  color: #B7B7B7;
+  text-decoration: underline;
+}
+
+div.ui.grid > div.ui.horizontal.list.rigntWrapper > b {
+  color: #E6413D;
+  text-decoration: underline;
+}
+
+div.ui.grid > div.ui.horizontal.list.rigntWrapper {
+  text-transform: capitalize;
+}
+
+
+
+
+
