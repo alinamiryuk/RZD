@@ -26,6 +26,7 @@ export const Breadcrumbs = () => {
         <Step active>
           <Step.Title>Данные пассажиров и оплата</Step.Title>
         </Step>
+        <Step disabled></Step>
       </Step.Group>
     </Grid>
   )
