@@ -1,0 +1,68 @@
+div.ui.grid.breadcrumbs {
+  margin: 1vh 0;
+  height: 3em;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.ui.grid.breadcrumbs > div.ui.top.attached.menu {
+  width: 20vw;
+  background-color: #f6f6f6;
+  border-color: #c3c3c3;
+  border-radius: 0.28571429rem;
+  align-items: center;
+  margin: 0 0;
+}
+
+div.ui.grid.breadcrumbs
+  > div.ui.top.attached.menu
+  > div.ui.item.simple.dropdown {
+  margin: 0 0.4vw 0 0;
+  padding: 0;
+}
+
+div.ui.grid.breadcrumbs > div.ui.steps {
+  width: fit-content;
+  margin: 0 1vw;
+  align-items: center;
+  padding: 0;
+  border: none;
+}
+
+div.ui.grid.breadcrumbs > div.ui.steps > div {
+  max-height: 3em;
+}
+
+div.ui.grid.breadcrumbs > div.ui.steps > div.step {
+  background-color: #7f7f7f;
+  padding: 12px 28px;
+}
+
+div.ui.grid.breadcrumbs > div.ui.steps > div.active.step {
+  background-color: #e33f32;
+}
+
+div.ui.grid.breadcrumbs > div.ui.steps > div.active.step > div.title, div.ui.grid.breadcrumbs > div.ui.steps > div.active.step, div.ui.grid.breadcrumbs > div.ui.steps > div {
+  color: white;
+}
+
+div.ui.grid.breadcrumbs > div.ui.steps > div.step > div.title:hover, div.ui.grid.breadcrumbs > div.ui.steps > div.active.step > div.title:hover {
+  color:rgb(230, 225, 225);
+  cursor: pointer;
+}
+
+div.ui.grid.breadcrumbs > div.ui.steps > div.disabled.step {
+  background-color: inherit;
+}
+
+div.ui.grid.breadcrumbs > div.ui.steps > div.step::after {
+  width: 2.1em;
+  height: 2.1em;
+  background-color: inherit;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.item:before {
+  display: none;
+}

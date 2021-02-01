@@ -1,6 +1,6 @@
 div.ui.grid {
   margin: 0;
-  height: 5vh;
+  height: 15vh;
   justify-content: space-between;
 }
 div.ui.grid > div.ui.horizontal.list.middleWrapper > a {

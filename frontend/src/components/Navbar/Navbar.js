@@ -4,7 +4,7 @@ import { List, Image, Grid, Flag } from 'semantic-ui-react'
 export const Navbar = () => {
   return (
     <Grid>
-      <Image src="/images/svg/rzd.svg" size="small" />
+      <Image src="/images/svg/rzd.svg" size="large" />
       <List horizontal className="middleWrapper">
         <List.Item as="a">Мобильная версия</List.Item>
         <List.Item as="a">Для слабовидящих</List.Item>
