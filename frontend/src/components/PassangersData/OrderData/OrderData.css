@@ -1,0 +1,47 @@
+div.ui.right.floated.segment {
+  width: 25vw;
+  background-color: #f6f6f6;
+}
+div.ui.right.floated.segment > div.ui.large.header,
+div.ui.right.floated.segment > div.ui.medium.header {
+  color: #606060;
+  font-weight: 500;
+}
+
+div.ui.right.floated.segment > div.ui.right.aligned.container > b > span {
+  color: #606060;
+}
+
+div.ui.right.floated.segment > div.ui.right.aligned.container > b,
+div.ui.right.floated.segment > div.ui.justified.container > b:nth-child(2) {
+  color: #e33f32;
+}
+
+div.ui.right.floated.segment > div.ui.justified.container > b:nth-child(2) {
+  float: right;
+}
+
+div.ui.right.floated.segment > div.ui.card {
+  width: 90%;
+  height: fit-content;
+  margin: 0 5%;
+}
+
+div.ui.right.floated.segment > div.ui.card {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+div.ui.right.floated.segment > div.ui.card > div.ui.red.basic.label {
+  margin: 0 0 0 -95% !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+
+div.ui.right.floated.segment > div.ui.container.routeInfo {
+  width: 95%;
+}
+
+div.ui.right.floated.segment > div.ui.container.routeInfo > div.ui.container.duration {
+  background-color: white;
+}
