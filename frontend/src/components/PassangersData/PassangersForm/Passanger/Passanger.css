@@ -1,0 +1,24 @@
+div.ui.left.floated.segment
+  > form
+  > div.ui.right.labeled.button
+  > button.ui.icon.button {
+  background-color: #e33f32;
+  border-radius: 0;
+}
+
+div.ui.left.floated.segment
+  > form
+  > div.ui.right.labeled.button
+  > button.ui.icon.button
+  > i {
+  color: white;
+}
+
+div.ui.left.floated.segment
+  > form
+  > div.ui.right.labeled.button
+  > div.ui.label {
+  background-color: inherit;
+  border-radius: 0;
+  color: #606060;
+}

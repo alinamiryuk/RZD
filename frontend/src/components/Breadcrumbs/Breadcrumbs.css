@@ -38,9 +38,10 @@ div.ui.grid.breadcrumbs > div.ui.steps {
 }
 
 div.ui.grid.breadcrumbs > div.ui.steps > div.step {
-  padding: 12px 28px;
-  background-color: #7f7f7f;
   max-height: 3em;
+  padding: 12px 28px;
+  border-radius:0;
+  background-color: #7f7f7f;
 }
 
 div.ui.grid.breadcrumbs > div.ui.steps > div.active.step {

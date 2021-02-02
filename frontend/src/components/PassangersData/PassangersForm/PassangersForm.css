@@ -1,0 +1,7 @@
+div.ui.left.floated.segment {
+  width: 60vw;
+  min-height: fit-content;
+  border: none;
+  /* box-shadow: none; */
+  background-color: inherit;
+}
