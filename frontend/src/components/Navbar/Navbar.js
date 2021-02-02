@@ -18,11 +18,9 @@ export const Navbar = () => {
         <List.Item as="a">
           <Flag name="gb" />
         </List.Item>
-
         <List.Item as="b">Максим Меньшенин</List.Item>
         <List.Item as="a">Выйти</List.Item>
       </List>
-      <div className="navbar__buttons"></div>
     </Grid>
   )
 }
