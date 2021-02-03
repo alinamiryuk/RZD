@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Divider, Header, Breadcrumb } from 'semantic-ui-react'
+import { Container, Header } from 'semantic-ui-react'
 import './RouteData.css'
 
 export const RouteData = ({ stationName, time, timeZone, date }) => {

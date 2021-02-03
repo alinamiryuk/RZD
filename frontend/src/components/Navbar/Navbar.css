@@ -1,8 +1,11 @@
 div.ui.grid {
-  margin: 0;
-  height: 15vh;
   justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  height: 10vh;
+  min-height: fit-content;
 }
+
 div.ui.grid > div.ui.horizontal.list.middleWrapper > a {
   color: #B7B7B7;
   text-decoration: underline;

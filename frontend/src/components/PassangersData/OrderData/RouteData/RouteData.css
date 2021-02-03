@@ -1,12 +1,10 @@
-div.ui.container.routeData > div.ui.center.container > div.ui.small.header.datetime {
-  color: #788a99;
-  display: inline;
-}
-
 div.ui.container.routeData > div.ui.small.header {
   margin-bottom: 0;
 }
 
-div.ui.container.routeData {
-  width: 95%;
+div.ui.container.routeData > div.ui.center.container > div.ui.small.header.datetime {
+  display: inline;
+  color: #788a99;
 }
+
+

@@ -1,17 +1,23 @@
 div.ui.grid.breadcrumbs {
-  margin: 1vh 0;
-  height: 3em;
   justify-content: flex-start;
   align-items: center;
+  margin: 1vh 0;
+  height: 3em;
+}
+
+/* menu */
+
+.item:before {
+  display: none;
 }
 
 div.ui.grid.breadcrumbs > div.ui.top.attached.menu {
+  align-items: center;
+  margin: 0 0;
   width: 20vw;
   background-color: #f6f6f6;
   border-color: #c3c3c3;
   border-radius: 0.28571429rem;
-  align-items: center;
-  margin: 0 0;
 }
 
 div.ui.grid.breadcrumbs
@@ -21,21 +27,21 @@ div.ui.grid.breadcrumbs
   padding: 0;
 }
 
+/* steps */
+
 div.ui.grid.breadcrumbs > div.ui.steps {
+  align-items: center;
   width: fit-content;
   margin: 0 1vw;
-  align-items: center;
   padding: 0;
   border: none;
 }
 
-div.ui.grid.breadcrumbs > div.ui.steps > div {
-  max-height: 3em;
-}
-
 div.ui.grid.breadcrumbs > div.ui.steps > div.step {
-  background-color: #7f7f7f;
+  max-height: 3em;
   padding: 12px 28px;
+  border-radius:0;
+  background-color: #7f7f7f;
 }
 
 div.ui.grid.breadcrumbs > div.ui.steps > div.active.step {
@@ -63,6 +69,3 @@ div.ui.grid.breadcrumbs > div.ui.steps > div.step::after {
   border-right: 1px solid white;
 }
 
-.item:before {
-  display: none;
-}
