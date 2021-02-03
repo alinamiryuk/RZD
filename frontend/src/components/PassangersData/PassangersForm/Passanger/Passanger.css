@@ -8,12 +8,18 @@ div.ui.left.floated.segment > form > div.field > button {
   border-radius: 0;
 }
 
+div.ui.left.floated.segment > form > div.ui.header {
+  color: #e33f32;
+  font-weight: 500;
+}
+
 div.ui.left.floated.segment
   > form
   > div.ui.right.labeled.button
   > button.ui.icon.button
   > i,
-div.ui.left.floated.segment > form > button > i, div.ui.left.floated.segment > form > div.field > button {
+div.ui.left.floated.segment > form > button > i,
+div.ui.left.floated.segment > form > div.field > button {
   color: white;
 }
 
@@ -24,4 +30,8 @@ div.ui.left.floated.segment
   background-color: inherit;
   border-radius: 0;
   color: #606060;
+}
+
+div.ui.left.floated.segment > form > div > div.field.formDate > div > input {
+  height: 38px;
 }

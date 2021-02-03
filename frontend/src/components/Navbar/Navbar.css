@@ -1,7 +1,8 @@
 div.ui.grid {
   justify-content: space-between;
+  align-items: flex-start;
   margin: 0;
-  height: 20vh;
+  height: 10vh;
   min-height: fit-content;
 }
 

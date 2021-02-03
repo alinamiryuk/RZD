@@ -2,6 +2,10 @@ div.ui.left.floated.segment {
   width: 60vw;
   min-height: fit-content;
   border: none;
-  /* box-shadow: none; */
+  box-shadow: none;
   background-color: inherit;
+}
+
+div.ui.left.floated.segment > form > div.field > div.checkbox {
+margin-top: 1em;
 }

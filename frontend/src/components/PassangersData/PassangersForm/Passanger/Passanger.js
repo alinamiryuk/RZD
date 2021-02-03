@@ -1,101 +1,68 @@
 import React from 'react'
-import { Form, Popup } from 'semantic-ui-react'
+import { Container, Form, Header, Popup } from 'semantic-ui-react'
+import { useDispatch } from 'react-redux'
 import { useForm } from '../../../../hooks/useForm'
+import { changePassengerData } from '../../../../redux/actions/passangerDataActions'
 import './Passanger.css'
-
-const optionsGender = [
-  { key: 'male', text: 'Male', value: 'male' },
-  { key: 'female', text: 'Female', value: 'female' },
-  { key: 'other', text: 'Other', value: 'other' },
-]
-
-const optionsCountry = [
-  { key: 'ru', text: 'Россия', value: 'ru' },
-  { key: 'kz', text: 'Казахстан', value: 'kz' },
-  { key: 'pol', text: 'Польша', value: 'pol' },
-]
-
-const optionsCell = [
-  { key: 'full', text: 'Полный', value: 'full' },
-  { key: 'child', text: 'Детский', value: 'child' },
-  { key: 'childNoSeat', text: 'Детский без места', value: 'childNoSeat' },
-]
-
-const optionsDocumentType = [
-  { key: 'ruPassport', text: 'Российский паспорт', value: 'ruPassport' },
-  {
-    key: 'ruForeignPassport',
-    text: 'Заграничный паспорт РФ',
-    value: 'ruForeignPassport',
-  },
-  {
-    key: 'foreignPassport',
-    text: 'Иностранный документ',
-    value: 'foreignPassport',
-  },
-  {
-    key: 'birthСertificate',
-    text: 'Cвидетельство о рождении',
-    value: 'birthСertificate',
-  },
-]
-const popupMiddleName =
-  'Если в вашем документе, удостоверяющем личность, не указано отчество, поставьте прочерк (дефис).'
-const popupBirthDate =
-  'Вводится, как указано в документе, удостоверяющем личность.'
-const popupDocumentType =
-  'Если пассажир не является гражданином России, выбирайте «Иностранный документ».'
-const popupDocumentNumber =
-  'Символ № не вводится. Если в документе есть серия, указывается серия и номер документа без пробела. Для иностранных документов и свидетельства о рождении при вводе римских цифр используйте заглавные латинские буквы (I, V, X). Например: Российский паспорт - 2345123456, Свидетельство о рождении - XIVБЮ123456, Иностранный документ - ВМ0472680, Заграничный паспорт РФ - 601522106'
+import {
+  emptyForm,
+  popupBirthDate,
+  popupDocumentNumber,
+  popupDocumentType,
+  optionsCell,
+  optionsCountry,
+  optionsDocumentType,
+  optionsGender,
+} from '../../../../utils/const'
 
 export const Passanger = ({ passengerType }) => {
-  const [passangerData, setPassangerData] = useForm({
-    lastName: '',
-    firstName: '',
-    middleName: '',
-    gender: '',
-    birthDate: '',
-    citizenship: '',
-    documentType: '',
-    documentNumber: '',
-    cell: '',
-    passengerType,
-  })
+  const dispatch = useDispatch()
+  const [passengerData, setPassangerData] = useForm(emptyForm)
 
   return (
     <>
-      <Form.Group widths="equal">
+    {passengerType === 'adult' ? <Header content="Пассажир №1: взрослый"/> : <Header content="Пассажир №2: детский без места"/>}
+      <Form.Group
+        widths="equal"
+        onChange={(e) => dispatch(changePassengerData(passengerData))}
+      >
         <Form.Input
           fluid
           label="Фамилия"
           name="lastName"
           placeholder="Введите фамилию"
+          value={passengerData.lastName}
+          onChange={setPassangerData}
         />
         <Form.Input
           fluid
           label="Имя"
           name="firstName"
           placeholder="Введите имя"
+          value={passengerData.firstName}
+          onChange={setPassangerData}
         />
-        <Popup
-          content={popupMiddleName}
-          trigger={
-            <Form.Input
-              fluid
-              label="Отчество"
-              name="middleName"
-              placeholder="Введите отчество"
-            />
-          }
+        <Form.Input
+          fluid
+          label="Отчество(при наличии)"
+          name="middleName"
+          placeholder="Введите отчество"
+          value={passengerData.middleName}
+          onChange={setPassangerData}
         />
       </Form.Group>
-      <Form.Group widths="equal">
+      <Form.Group
+        widths="equal"
+        onChange={(e) => dispatch(changePassengerData(passengerData))}
+      >
         <Form.Select
           fluid
           label="Пол"
           name="gender"
           options={optionsGender}
           placeholder="не выбрано"
+          defaultValue={passengerData.gender}
+          onChange={setPassangerData}
         />
         <Popup
           content={popupBirthDate}
@@ -106,6 +73,8 @@ export const Passanger = ({ passengerType }) => {
               name="birthDate"
               type="date"
               className="formDate"
+              value={passengerData.birthDate}
+              onChange={setPassangerData}
             />
           }
         />
@@ -115,9 +84,14 @@ export const Passanger = ({ passengerType }) => {
           name="citizenship"
           options={optionsCountry}
           placeholder="не выбрано"
+          defaultValue={passengerData.citizenship}
+          onChange={setPassangerData}
         />
       </Form.Group>
-      <Form.Group widths="equal">
+      <Form.Group
+        widths="equal"
+        onChange={(e) => dispatch(changePassengerData(passengerData))}
+      >
         <Popup
           content={popupDocumentType}
           trigger={
@@ -127,6 +101,8 @@ export const Passanger = ({ passengerType }) => {
               name="documentType"
               options={optionsDocumentType}
               placeholder="не выбрано"
+              defaultValue={passengerData.documentType}
+              onChange={setPassangerData}
             />
           }
         />
@@ -138,6 +114,8 @@ export const Passanger = ({ passengerType }) => {
               label="Номер документа"
               name="documentNumber"
               placeholder="Номер документа"
+              value={passengerData.documentNumber}
+              onChange={setPassangerData}
             />
           }
         />
@@ -147,6 +125,8 @@ export const Passanger = ({ passengerType }) => {
           name="cell"
           options={optionsCell}
           placeholder="Тариф"
+          defaultValue={passengerData.cell}
+          onChange={setPassangerData}
         />
       </Form.Group>
     </>
