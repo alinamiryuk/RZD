@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, Icon, Label, Popup, Segment } from 'semantic-ui-react'
+import { Button, Form, Icon, Label, Segment } from 'semantic-ui-react'
 import { Passanger } from './Passanger/Passanger'
 import './PassangersForm.css'
 
@@ -10,10 +10,15 @@ export const PassangersForm = () => {
       <Form>
         <Passanger passengerType="disabled" />
         {childForm ? (
-          <Passanger passengerType="child" />
+          <>
+            <Button icon onClick={() => setChildForm((state) => !state)}>
+              <Icon name="minus" />
+            </Button>
+            <Passanger passengerType="child" />
+          </>
         ) : (
           <Button as="div" labelPosition="right">
-            <Button icon>
+            <Button icon onClick={() => setChildForm((state) => !state)}>
               <Icon name="plus" />
             </Button>
             <Label>Добавить ребенка(до 5 лет)</Label>
@@ -21,8 +26,10 @@ export const PassangersForm = () => {
         )}
 
         <Form.Checkbox label="Я согласен наобработку персональных данных" />
-        <Form.Button>Оформить билет</Form.Button>
+        <Form.Button content='Оформить билет' />
       </Form>
+
+      <pre>{JSON.stringify({  }, null, 2)}</pre>
     </Segment>
   )
 }

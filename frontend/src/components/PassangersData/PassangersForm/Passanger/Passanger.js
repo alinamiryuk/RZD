@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Form, Icon, Popup } from 'semantic-ui-react'
+import { Form, Popup } from 'semantic-ui-react'
+import { useForm } from '../../../../hooks/useForm'
 import './Passanger.css'
 
 const optionsGender = [
@@ -48,15 +49,43 @@ const popupDocumentNumber =
   'Символ № не вводится. Если в документе есть серия, указывается серия и номер документа без пробела. Для иностранных документов и свидетельства о рождении при вводе римских цифр используйте заглавные латинские буквы (I, V, X). Например: Российский паспорт - 2345123456, Свидетельство о рождении - XIVБЮ123456, Иностранный документ - ВМ0472680, Заграничный паспорт РФ - 601522106'
 
 export const Passanger = ({ passengerType }) => {
+  const [passangerData, setPassangerData] = useForm({
+    lastName: '',
+    firstName: '',
+    middleName: '',
+    gender: '',
+    birthDate: '',
+    citizenship: '',
+    documentType: '',
+    documentNumber: '',
+    cell: '',
+    passengerType,
+  })
+
   return (
     <>
       <Form.Group widths="equal">
-        <Form.Input fluid label="Фамилия" placeholder="Введите фамилию" />
-        <Form.Input fluid label="Имя" placeholder="Введите имя" />
+        <Form.Input
+          fluid
+          label="Фамилия"
+          name="lastName"
+          placeholder="Введите фамилию"
+        />
+        <Form.Input
+          fluid
+          label="Имя"
+          name="firstName"
+          placeholder="Введите имя"
+        />
         <Popup
           content={popupMiddleName}
           trigger={
-            <Form.Input fluid label="Отчество" placeholder="Введите отчество" />
+            <Form.Input
+              fluid
+              label="Отчество"
+              name="middleName"
+              placeholder="Введите отчество"
+            />
           }
         />
       </Form.Group>
@@ -64,6 +93,7 @@ export const Passanger = ({ passengerType }) => {
         <Form.Select
           fluid
           label="Пол"
+          name="gender"
           options={optionsGender}
           placeholder="не выбрано"
         />
@@ -73,6 +103,7 @@ export const Passanger = ({ passengerType }) => {
             <Form.Input
               fluid
               label="Дата рождения"
+              name="birthDate"
               type="date"
               className="formDate"
             />
@@ -81,6 +112,7 @@ export const Passanger = ({ passengerType }) => {
         <Form.Select
           fluid
           label="Гражданство"
+          name="citizenship"
           options={optionsCountry}
           placeholder="не выбрано"
         />
@@ -92,6 +124,7 @@ export const Passanger = ({ passengerType }) => {
             <Form.Select
               fluid
               label="Тип документа"
+              name="documentType"
               options={optionsDocumentType}
               placeholder="не выбрано"
             />
@@ -103,6 +136,7 @@ export const Passanger = ({ passengerType }) => {
             <Form.Input
               fluid
               label="Номер документа"
+              name="documentNumber"
               placeholder="Номер документа"
             />
           }
@@ -110,6 +144,7 @@ export const Passanger = ({ passengerType }) => {
         <Form.Select
           fluid
           label="Тариф"
+          name="cell"
           options={optionsCell}
           placeholder="Тариф"
         />

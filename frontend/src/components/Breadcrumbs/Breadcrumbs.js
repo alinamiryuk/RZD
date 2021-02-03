@@ -1,5 +1,5 @@
 import React from 'react'
-import { Step, Icon, Grid, Menu, Dropdown } from 'semantic-ui-react'
+import { Step, Grid, Menu, Dropdown } from 'semantic-ui-react'
 import './Breadcrumbs.css'
 
 export const Breadcrumbs = () => {

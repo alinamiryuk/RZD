@@ -1,7 +1,9 @@
 div.ui.left.floated.segment
   > form
   > div.ui.right.labeled.button
-  > button.ui.icon.button {
+  > button.ui.icon.button,
+div.ui.left.floated.segment > form > button,
+div.ui.left.floated.segment > form > div.field > button {
   background-color: #e33f32;
   border-radius: 0;
 }
@@ -10,7 +12,8 @@ div.ui.left.floated.segment
   > form
   > div.ui.right.labeled.button
   > button.ui.icon.button
-  > i {
+  > i,
+div.ui.left.floated.segment > form > button > i, div.ui.left.floated.segment > form > div.field > button {
   color: white;
 }
 
